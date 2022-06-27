@@ -1,8 +1,11 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<web-app
+        version="3.0"
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <!-- web-app_2_3.xsd 这个版本还不支持jstl -->
 
-<web-app>
   <display-name>Archetype Created Web Application</display-name>
 
   <servlet-mapping>
@@ -14,5 +17,32 @@
     <servlet-class>cn.edu.qdu.todo.servlet.HelloServlet</servlet-class>
   </servlet>
 
+
+  <servlet-mapping>
+    <servlet-name>add</servlet-name>
+    <url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>add</servlet-name>
+    <servlet-class>cn.edu.qdu.todo.servlet.AddServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>complete</servlet-name>
+    <url-pattern>/complete</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>complete</servlet-name>
+    <servlet-class>cn.edu.qdu.todo.servlet.CompleteServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>delete</servlet-name>
+    <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>delete</servlet-name>
+    <servlet-class>cn.edu.qdu.todo.servlet.DeleteServlet</servlet-class>
+  </servlet>
 
 </web-app>
