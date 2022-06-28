@@ -5,7 +5,7 @@ import cn.edu.qdu.todo.servlet.db.TodoDB;
 
 import java.util.Map;
 
-public class TodoDao {
+public class TodoDao implements Dao {
 
     //查询全部
     public Map<String, Todo> getOngoingList(){
